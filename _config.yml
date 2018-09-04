@@ -4,7 +4,8 @@ title: Luckych454.github.io
 description: > # this means to ignore newlines until "baseurl:"
   A tiny site of Luckych's.<br />
   Powered by Jekyll + GitHub Pages.
-
+exclude: ['about.md', 'categories.md']
+plugins: [jekyll-paginate]
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://Luckych454.github.io" # the base hostname & protocol for your site
 
