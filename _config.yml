@@ -10,11 +10,10 @@ plugins: [jekyll-paginate]
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://Luckych454.github.io" # the base hostname & protocol for your site
 
-#twitter_username: jekyllrb
 github_username:  Luckych454
 
 githubio_https_redirect: true
-google_analytics: vanilla
+google_analytics: UA-54761187-1
 
 paginate: 10 # pagination based on number of posts
 
@@ -23,7 +22,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: Chris
+      author: Luckych
 
 # Build settings
 markdown: kramdown
