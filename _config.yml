@@ -1,14 +1,14 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Luckych454
+email: 851022445a@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Vanilla site with vanilla theme.
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "http://Luckych454.github.io" # the subpath of your site, e.g. /blog/
+url: "http://Luckych454.github.io" # the base hostname & protocol for your site
 
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  Luckych454
 
 githubio_https_redirect: true
 google_analytics: vanilla
@@ -20,7 +20,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: Vanilla
+      author: Chris
 
 # Build settings
 markdown: kramdown
