@@ -31,8 +31,6 @@ softmax(x, axis=-1)
 ```
 直接放链接吧。
 
-[机器之心-26种神经网络激活函数可视化
+[机器之心-26种神经网络激活函数可视化](https://www.jiqizhixin.com/articles/2017-10-10-3) 
 
-
-](https://www.jiqizhixin.com/articles/2017-10-10-3) 
 [图片来源(看得更清晰)](https://dashee87.github.io/data%20science/deep%20learning/visualising-activation-functions-in-neural-networks/) 
