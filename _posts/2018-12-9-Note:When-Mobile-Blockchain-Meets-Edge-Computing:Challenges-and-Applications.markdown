@@ -41,7 +41,7 @@ tags: "Notes"
 
 2. 区块链保证了许多用户的认可和考虑，采用加密技术防止恶意中间人更改，篡改或删除记录。consensus is a mechanism to ensure trust in the network. As such, the majority of users can veto" to discard the false transaction.
 
-3. **Byzantine attack **and **Sybil attack**, where an attacker creates mixed information (i.e., fake blockchain) and pseudonymous users in the network. Malicious users need to control over **51%** of all the computing po wer in the network to mislead the network
+3. **Byzantine attack** and **Sybil attack**, where an attacker creates mixed information (i.e., fake blockchain) and pseudonymous users in the network. Malicious users need to control over **51%** of all the computing po wer in the network to mislead the network
 to accept a false block.
 
 #### Mobile Edge Computing For Blockchain
@@ -64,6 +64,7 @@ to accept a false block.
 2. 通过控制变量法，验证了当边缘计算服务需求增加时，旷工采矿成功的概率增加。
 
 #### MOBILE EDGE COMPUTING RESOURCE MANAGEMENT IN BLOCKCHAIN
+
 >在本节给出了移动区块链的边缘计算系统模型。和普通的挖矿差不多，成本来自边缘计算资源提供商。Present a two-stage Stackelberg game formulation and equilibrium analysis. 主要就是讨论如何使服务商，矿工的利益达到最大化。
 
 1. 供应商和矿工之间的交互可以建模为两阶段的Srackelberg博弈。Leader 在第一阶段确定每一个计算单元的服务价格，the followers, 在知道提供者设定的价格的情况下，决定他们在较低的第二剪- 短执行采矿任务的最佳计算服务需求。
