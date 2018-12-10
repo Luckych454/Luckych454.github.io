@@ -1,5 +1,5 @@
 ---
-title: "When Mobile Blockchain Meets Edge Computing:Challenges and Applications"
+title: "Note:When Mobile Blockchain Meets Edge Computing:Challenges and Applications"
 data: 2018-12-9
 tags: "Notes"
 ---
