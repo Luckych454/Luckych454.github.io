@@ -10,12 +10,48 @@ tags: "RLAI"
 评价型反馈与指导性反馈的不同
 
 ### 2.1 一个 k 臂赌博机问题
-
+k-armed bandit problem,a slot machine, or “one-armed bandit,”
 你可以反复面对 k 种不同的选择或行动。在每次选择之后，你会收到一个数值奖励，该奖励取决于你选择的行动的固定概率分布。 你的目标是在一段时间内最大化预期的总奖励，例如，超过1000个操作选择或 时间步骤。
 
 行动的价值：每个动作的一个预期的的或平均的奖励
 
-将在时间步骤 t 的动作 a 的估计值表示为 $Q_t(a)$, 我们希望 Qt(a) 接近 q∗(a)。
+将在时间步骤 t 的动作 a 的估计值表示为 $Q_t(a)$, 我们希望 Qt(a) 接近 q∗(a)。——估计的Q值尽量接近实际的动作价值。
+exploiting and exploring
 
+### 2.2 Action-value Methods
+use e-greedy action-value methods.
 
+With noisier rewards it takes more exploration to find the optimal action,
+
+Reinforcement learning requires a balance between exploration and exploitation.
+
+### 2.4 增量实现
+
+We now turn to the question of how these averages can be computed in a computationally efficient manner,
+
+新估计←旧估计+步长[目标−旧估计]
+
+通过向“目标”迈出一步来减少它。
+
+### 2.5 追踪非平稳问题
+
+我们经常会遇到非常不稳定的强化学习问题。 在这种情况下，给予最近的奖励比给长期的奖励更重要。最常用的方法之一是使用常量步长参数。
+
+指数新近加权平均值。
+
+但是之哟啊步数足够大，就能克服任何出事条件或随机波动，第二个条件保证最终步骤变得足够小以全包收敛。
+
+### 2.6 指数新近加权平均值
+
+如果一开始我们就有一个比较好的奖励，会怎么样呢，这就是乐观的初始值。
+
+它不适合非平稳问题，因为它的驱动对于探索本质上是暂时的。
+
+### 2.7 上限置信区间动作选择
+
+用来选择更多以前没选过的动作
+
+### 2.8 赌博机问题的梯度算法
+
+使用梯度上升降的方法去更新熵值。
 
