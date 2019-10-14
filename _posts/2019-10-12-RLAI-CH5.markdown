@@ -1,0 +1,107 @@
+---
+title: "RLAI-CH05"
+data: 2019-10-12
+tags: "RLAI"
+---
+## 第5章 蒙特卡洛方法
+
+这里我们不再假设我们对环境有完全的了解。
+
+蒙特卡洛方法需要的仅仅是 经验*──与环境进行真实的或者模拟的交互所得到的状态，动作，奖励的样本序列。
+
+不需要关于环境动态的先验知识的情况下仍然能够获得最优的行为（策略）；
+
+蒙特卡洛方法是基于对样本回报求平均的办法来解决强化学习的问题的。
+
+我们假设我们的经验被分成一个个的回合，而且对每个回合而言，不管选择什么样的动作，都会结束。 只有在事件结束时，我们的价值估计和策略才会改变。
+
+术语“蒙特卡洛”被广泛的用于任何的在操作中引入了随机成分的估计方法。
+
+### 5.1 蒙特卡洛预测
+
+在给定策略的情况下，用蒙特卡洛方法学习状态-价值函数。
+
+一个状态的价值等于从这个状态开始的期望回报──期望的累积未来折扣奖励。
+
+两种蒙特卡洛方法：
+
+- 一种只计算所有回合中，首次访问状态s的平均回报，用这个作为V（s）的估计值，我们称之为首次访问mc方法
+- 计算所有回合中每次访问状态s的平均回报，成为每次访问MC方法。
+
+
+## 5.2 动作价值的蒙特卡洛估计
+
+If a model is not available : estimate state-action calue is  more useful
+with a model state calues are sufficient to determine a policy
+
+对于动作价值的策略评估：估计q(s,a)。从状态s开始，做出动作a，之后遵循策略pi，所获得的期望回报！
+
+当访问次数趋近于无穷时，这两种方法（指每次访问 MC 和首次访问 MC）都会以二次方收敛到期望值。
+
+唯一的问题是，可能会有许多状态-动作对从未被访问到。
+
+这是一个很普遍的问题，即 保持探索。
+
+为了比较所有的可能，我们需要估计每个状态 所有 可能的动作，而不仅仅是当前选择的动作。
+
+### 5.3 蒙特卡洛控制
+
+广义策略迭代（GPI）同时维持一个进士的策略和一个近似的价值函数。价值函数会不断地靠近当前策略地价值，而这个策略也会不断地根据当前的价值进行提升。
+
+策略评估和策略提升：（evaluation and improvement）
+
+![](https://rl.qiwihui.com/zh_CN/latest/_images/GPI_chp5.3.png)
+
+目的就是使用模特卡洛方法去近似每个策略的value
+
+Exploring Starts 试探性出发
+
+### 5.4 非探索开端的蒙特卡洛控制
+
+唯一的一般性解决方法就是智能体能够持续不断地选择所有可能的动作。
+
+两个方法：
+1. on-policy : 用于生成采样数据序列的策略和用于决策的待评估和改进的策略是相同的
+2. off-policy：用于评估或者改进的策略与生成采样数据的策略是不同的。
+
+### 5.5 Off-policy Prediction via Importance Sampling
+
+所有的控制方法都会面临这样一个两难的问题：一方面，他们需要通过 最优 的行为来学习动作价值； 但另一方面，他们需要表现地不那么好，来探索所有的动作（来 找到 最优的动作）。
+
+使用两个策略：一个用来学习并成为最终策略，一个用来生成智能体的行动样本。
+
+### 5.6 增量式的实现
+
+ 对于 离策略 蒙特卡洛方法，我们需要分别考虑 原始 重要性采样和 加权 重要性采样两种情况。
+ 
+ 
+### 5.10 小结
+三种优势
+
+1. 能够直接从6与环境的交互中学习到最优的行为，并不需要知道环境的动态
+they can be used to learn optimal behavior directly from interaction with the environment, with no model of the environment’s dynamics.
+2. 他们可以使用数据仿真或采样模型，在非常多的应用中，虽然很难构建DP方法所需要的显示状态概率转移模型，但是通过仿真采样得到多幕序列数据确实很简单的。
+Second, they can be used with simulation or sample models. For surprisingly many applications it is easy to simulate sample episodes even though it is difficult to construct the kind of explicit model of transition probabilities required by DP methods.
+3. MC方法可以很简单和高效地聚焦于状态地一个小的子集，它可以只评估关注的区域而不评估其余的状态。
+Third, it is easy and efficient to focus Monte Carlo methods on a small subset of the states.
+4. 在马尔可夫性不成立时能损失较小。它不需要bootstrap
+A fourth advantage of Monte Carlo methods, which we discuss later in the book, is that they may be less harmed by violations of the Markov property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
